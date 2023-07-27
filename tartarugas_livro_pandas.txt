@@ -1,0 +1,152 @@
+## Problema 1: Escreva um programa que escreve Eu gosto das tartarugas do Python! 1000 vezes.
+for i in range(1000):
+    print("Eu gosto das tartarugas do Python!")
+
+## Problema 2: Dê três atributos de seu objeto telefone celular. Dê três métodos do seu celular.
+
+## Problema 3: Escreva um programa que usa um laço for para imprimir
+Um dos meses do ano é janeiro
+Um dos meses do ano é fevereiro
+Um dos meses do ano é março
+etc …
+
+meses = ["janeiro", "fevereiro", "marco", "maio", "junho", "julho",
+         "agosto", "setembro", "outubro", "novembro", "dezembro"]
+
+for mes in meses:
+    print("Um dos meses do ano é", mes)
+
+## Problema 4: Considere a seguinte atribuição xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+Escreva um laço que imprima cada um dos números em uma nova linha.
+Escreva um laço que imprima cada um dos números e seu quadrado em uma nova linha.
+
+xs = [12, 10, 32, 3, 66, 17, 42, 99, 20]
+
+for i in xs:
+    print(i)
+
+for i in xs:
+    print(i,i*i)
+
+
+## Problema 5: Use o laço for para fazer uma tartaruga desenhar os seguintes polígonos regulares 
+(regular significa que todos os lados tem o mesmo comprimento e ângulo entre lados):
+Um triângulo equilátero
+Um quadrado
+Um hexágono (seis lados)
+Um octágono (oito lados)
+
+import turtle
+wn = turtle.Screen()
+
+tess = turtle.Turtle()
+tess.speed(4)
+
+for i in range(3):
+    tess.left(120)
+    tess.forward(50)
+    if i == 2:
+        tess.penup()
+        tess.goto(50,0)
+        tess.pendown()
+    
+for i in range(4):
+    tess.forward(50)
+    tess.left(90)
+    if i == 3:
+        tess.penup()
+        tess.goto(50, -20)
+        tess.pendown()
+
+for i in range(6):
+    tess.forward(50)
+    tess.left(-60)
+    if i == 5:
+        tess.penup()
+        tess.goto(-70, -20)
+        tess.pendown()
+
+for i in range(8):
+    tess.forward(50)
+    tess.left(-45)
+
+## Problema 6: Um pirata bêbado vira aleatoriamente e então dá 100 passos para frente, vira aleatoriamente 
+novamente, dá mais 100 passos, vira aleatóriamente, etc. Um aluno de sociologia mede e grava o ângulo de cada 
+virada antes dele dele andar 100 passos. O resultado experimentais é [160, -43, 270, -97, -43, 200, -940, 17, -86]. 
+(Ângulos positivos no sentido anti-horário). Use uma tartaruga para desenhar o caminho percorrido pelo nosso amigo 
+bêbado.
+
+import turtle
+wn = turtle.Screen()
+
+alex = turtle.Turtle()
+alex.speed(5)
+
+angulos = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+
+for i in angulos:
+    alex.left(i)
+    alex.forward(100)
+
+## Problema 7: Melhore o seu programa acima para dizer também a direção final do pirata bêbado, após percorrer 
+todo o caminho.
+
+## Problema 9: Escreva um programa que desenha uma forma como essa (uma estrela de 5 pontas)
+
+http://clubes.obmep.org.br/blog/probleminha-estrela-pentagonal/
+
+import turtle
+wn = turtle.Screen()
+
+alex = turtle.Turtle()
+alex.speed(5)
+
+tess = turtle.Turtle()
+tess.speed(2)
+tess.color("orange")
+tess.left(108)
+    
+for lado in range(5):
+    alex.left(72)
+    alex.forward(100)
+
+for lado in range(5):
+        tess.forward(100)
+        tess.left(144)
+
+## Problema 10: Escreva um programa que desenha a face de um relógio que se pareça com
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+alex.speed(2)
+alex.penup()
+alex.shape("turtle")
+alex.goto(0,100)
+alex.tiltangle(45)
+
+for i in range(12):
+    alex.stamp()
+    alex.right(30)
+    alex.forward(50)
+
+alex.tiltangle(0) 
+alex.goto(-30,0)
+
+## Problema 12: Crie uma tartaruga e a atribua a uma variável. O que você obtem ao imprimir o seu tipo?
+
+import turtle
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+alex = turtle.Turtle()
+
+tartaruga = alex
+print(tartaruga)
+
+resposta: <turtle.Turtle object at 0x00000222EEAC54E0>
+
